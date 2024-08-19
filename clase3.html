@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm:14px;
+            --md:16px;
+            --lg:18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Balsamiq Sans', cursive;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo {
+            width: 200px;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            justify-self: center;
+            display: none;
+        }
+        .email {
+            display: flex;
+            flex-direction: column;
+            justify-content:end;
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input {
+                background-color: var(--text-input-field);
+                border: none;
+                border-radius: 8px;
+                height: 25px;
+                font-size: var(--md);
+                padding: 4px;
+                margin-bottom: 12px;
+        }
+        .input-email {
+            margin-bottom: 22px;
+        }
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .primary-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        .goBack {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 32px;
+        }
+        .goBack a {
+            color: var(--hospital-green);
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: var(--sm);
+        }
+        .secondary-button {
+            background-color: var(--white);
+            border-color: var(--hospital-green);
+            border: 1px;
+            border-radius: 8px;
+            border-style: solid;
+            color: var(--hospital-green);
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+            font-size: var(--md);
+            padding: 4px;
+            margin-top: 50px;
+        }
+        @media (max-width: 640px) {
+            .logo {
+                display: block;
+            }
+            .secondary-button {
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <form action="/" class="form">
+                <label for="email" class="label">Email address</label>
+                <input type="text" id="emailLogin" placeholder="test@example.com" class="input input-email">
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="**********" class="input input-password">
+                <input type="submit" value="Log in" class="primary-button login-button">
+            </form>
+            <p class="goBack">
+                <a href="/">Forgot my password</a>
+            </p>
+        <button class="secondary-button signup-button">Sign up</button>
+        </div>
+    </div>
+</body>
+</html>
